@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import './App.css'
 import Todo from './components/Todo'
 import Form from './components/Form'
 function App() {
@@ -6,11 +7,14 @@ function App() {
   return (
     <>
       <Form></Form>
+      <div className='todos-center'>
       {
         todos.map(todo => (
-            <Todo todo={todo} key={todo.id}/>
+          <Todo className='ccc' todo={todo} key={todo.id}/>
         ))
       }
+
+      </div>
     </>
   );
 }

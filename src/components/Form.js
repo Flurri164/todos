@@ -10,6 +10,7 @@ function Form() {
         const todo = {
             id: v4(),
             text: todoText,
+            complete: false,
         }
         dispatch(addTodo(todo))
         setTodoText('')

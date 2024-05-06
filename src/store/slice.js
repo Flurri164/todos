@@ -4,9 +4,19 @@ export const slice = createSlice({
     initialState: {todos:[]},
     reducers: {
         addTodo: (state, action) => {
-            state.todos.push(action.payload)
+            if(action.payload.text !== ''){
+
+                state.todos.push(action.payload)
+            }
+        },
+        toggleTodo: (state, action) => {
+            const toggle = state.todos.find((todo) => todo.id ===action.payload)
+            toggle.complete = !toggle.complete
+        },
+        remove: (state, action) => {
+            state.todos = state.todos.filter((todo) => todo.id !== action.payload)
         }
     }
 })
-export const {addTodo} = slice.actions
+export const {addTodo, toggleTodo, remove} = slice.actions
 export default slice.reducer

@@ -2,4 +2,26 @@ p {
     color: rgb(60, 255, 0);
     text-align: center;
     font-size: 30px;
+    padding: 10px 20px;
+}
+.todos-flex {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    align-items: center;
+    margin: 20px 0 0;
+}
+.todos-flex + .todos-flex {
+    margin: 20px 0;
+}
+.buttons {
+    padding: 10px;
+    background-color: red;
+}
+.complete {
+    background-color: rgb(55, 255, 0);
+}
+.comp {
+    text-decoration: line-through;
+    color: rgb(94, 255, 0);
 }
